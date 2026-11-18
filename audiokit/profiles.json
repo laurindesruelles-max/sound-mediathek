@@ -1,0 +1,184 @@
+{
+ "_info": "Kanal-Profile für audiokit (Laurin 18.11.2026). Jeder Kanal behält eigene Sounds und eigene Musik – hier stehen nur die Regeln.",
+ "goldsmith": {
+  "sfx": {
+   "normalize": false,
+   "max_per_10s": 4,
+   "max_per_min": 16,
+   "min_repeat_s": 1.2,
+   "max_stack": 2,
+   "max_loop_s": 8,
+   "repeat_overrides": {
+    "text_click": 1.6,
+    "shutter": 2.0
+   },
+   "banned": [
+    "siren",
+    "wind",
+    "noise"
+   ]
+  },
+  "music": {
+   "mode": "rests",
+   "max_same_s": 70,
+   "swell_db": 4.5,
+   "swell_s": 3.0,
+   "rest_s": 1.0,
+   "rest_min_strength": 2,
+   "duck_db": -8.0,
+   "pre_chapter_dip_db": -6.0,
+   "intro_music": false,
+   "under_voice_db": 17
+  }
+ },
+ "meisterwerk": {
+  "sfx": {
+   "normalize": true,
+   "ref_lufs": -20,
+   "max_per_10s": 3,
+   "max_per_min": 12,
+   "min_repeat_s": 1.5,
+   "max_stack": 2,
+   "max_loop_s": 6,
+   "repeat_overrides": {
+    "shutter": 3.0,
+    "thud": 2.5,
+    "boom": 8.0,
+    "sub_drop": 10.0,
+    "machine_engine": 0,
+    "grind": 0
+   },
+   "per_min_overrides": {
+    "shutter": 6,
+    "boom": 2,
+    "sub_drop": 1
+   },
+   "banned": [
+    "siren",
+    "whir",
+    "music_tension",
+    "clink",
+    "noise",
+    "wind"
+   ]
+  },
+  "music": {
+   "mode": "rests",
+   "max_same_s": 70,
+   "swell_db": 4.5,
+   "swell_s": 3.0,
+   "rest_s": 0.9,
+   "rest_min_strength": 3,
+   "duck_db": -8.0,
+   "pre_chapter_dip_db": -6.0,
+   "intro_music": true,
+   "under_voice_db": 16
+  }
+ },
+ "unterbau": {
+  "sfx": {
+   "normalize": true,
+   "ref_lufs": -20,
+   "max_per_10s": 3,
+   "max_per_min": 12,
+   "min_repeat_s": 1.5,
+   "max_stack": 2,
+   "max_loop_s": 8,
+   "repeat_overrides": {
+    "ub_klick": 2.5,
+    "ub_hit": 8.0,
+    "ub_drop": 12.0,
+    "ub_riser": 10.0
+   },
+   "banned": [
+    "siren",
+    "wind",
+    "noise"
+   ]
+  },
+  "music": {
+   "mode": "rests",
+   "max_same_s": 70,
+   "swell_db": 4.5,
+   "swell_s": 3.0,
+   "rest_s": 1.0,
+   "rest_min_strength": 3,
+   "duck_db": -8.0,
+   "pre_chapter_dip_db": -6.0,
+   "intro_music": true,
+   "under_voice_db": 16
+  }
+ },
+ "denkmuster": {
+  "sfx": {
+   "normalize": true,
+   "ref_lufs": -20,
+   "max_per_10s": 3,
+   "max_per_min": 10,
+   "min_repeat_s": 1.5,
+   "max_stack": 2,
+   "max_loop_s": 4,
+   "repeat_overrides": {
+    "pop.wav": 2.2,
+    "pop_klein.wav": 1.6,
+    "schwenk.wav": 3.0,
+    "aha_funkeln.wav": 15.0,
+    "klang.wav": 20.0
+   },
+   "per_min_overrides": {
+    "pop.wav": 7,
+    "pop_klein.wav": 5,
+    "aha_funkeln.wav": 2
+   },
+   "banned": [
+    "marker",
+    "zeichen",
+    "strich"
+   ]
+  },
+  "music": {
+   "mode": "rests",
+   "max_same_s": 60,
+   "swell_db": 4.5,
+   "swell_s": 2.5,
+   "rest_s": 0.8,
+   "rest_min_strength": 3,
+   "duck_db": -7.0,
+   "pre_chapter_dip_db": -5.0,
+   "intro_music": true,
+   "under_voice_db": 17
+  }
+ },
+ "nachtausgabe": {
+  "sfx": {
+   "normalize": false,
+   "ref_lufs": -20,
+   "max_per_10s": 4,
+   "max_per_min": 14,
+   "min_repeat_s": 1.5,
+   "max_stack": 2,
+   "max_loop_s": 6,
+   "repeat_overrides": {
+    "short-video-whoosh-01": 3.0,
+    "cinematic-boom-01": 15.0,
+    "reveal-impact-01": 12.0
+   },
+   "banned": [
+    "wind",
+    "noise"
+   ]
+  },
+  "music": {
+   "mode": "continuous",
+   "max_same_s": 80,
+   "swell_db": 5.0,
+   "swell_s": 3.5,
+   "rest_s": 0,
+   "rest_min_strength": 99,
+   "duck_db": -5.0,
+   "pre_chapter_dip_db": 0.0,
+   "intro_music": true,
+   "under_voice_db": 13
+  }
+ }
+}
