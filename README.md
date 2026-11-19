@@ -19,6 +19,22 @@ Jede `setup.sh` lädt `audiokit/` nach `/home/claude/audiokit` (neu laden: `AK_U
 
 Der `ton_bericht.txt` jedes Videos gehört in die Prüfung vor der Freigabe (qa.md): Lücken > 22 s ohne neuen Reiz = Bild/Schnitt nacharbeiten.
 
-## bibliothek/ (noch leer)
+## bibliothek/ (Laurins Sammlung, eingepflegt 19.11.2026)
 
-Platz für Laurins Sammlung mit ~1000 Effekten. Sobald sie hier liegt, können die Kanäle daraus automatisch passende Sounds ziehen (Ordner je Kategorie, z. B. `bibliothek/impacts/`, `bibliothek/ui/`, `bibliothek/foley/`). Hochladen: Ordner per GitHub-Weboberfläche in `bibliothek/` ziehen (max. 100 Dateien je Upload) oder als ZIP in einen Chat geben.
+Aus Laurins drei Paketen (936 Dateien) wurden **574 Sounds** übernommen: geprüft, doppelte entfernt, Anfangsstille abgeschnitten, als FLAC 48 kHz gespeichert, nach Kategorie sortiert und **jedem Kanal eigene Effekte** zugeteilt (Laurin 17.11.2026). Goldsmith behält seine eigene sound-library.
+
+| Ordner | Inhalt |
+|---|---|
+| `meisterwerk/` | Impacts (HITS), Kamera-Klicks, Whooshes (Cinematic Pack 2/3, Pack 4), Sub-Drops, Riser |
+| `unterbau/` | Glitches + Digital-HUD (Daten-Grafiken), Riser, Sub-Drops Low+Hi, Whooshes, Impacts |
+| `denkmuster/` | weiche Klicks/Buttons/Pops, Glocken/Funkeln (Aha-Momente), Swooshes/Swishes, Riser |
+| `nachtausgabe/` | Spannung/Horror/Drones/Uhr-Ticken, alte Kamera (Blitz), Whooshes (Cinematic Pack 1, Pack 5), Sub-Drops |
+| `gemeinsam/` | realistische Geräusche für alle: Foley, Atmos (Feuer, Wasser, U-Bahn, Zug), Waffen |
+| `reserve/` | noch keinem Kanal zugeteilt (vor allem Übergänge) – nur nach Rückfrage vergeben |
+
+`katalog.json` = alle Sounds mit Kanal, Kategorie, Dauer, Lautheit, Original-Datei, Lizenz. Je Ordner `LISTE.md`. `AUSSORTIERT.md` = was nicht übernommen wurde und warum:
+- **Memes, Anime, Games, TV, Klingeltöne** (ganzes 230er-Paket + memes-Ordner) – urheberrechtlich geschützt, riskant für monetarisierte Videos
+- **kommerzielle Libraries** (Epidemic Sound, Blastwave FX, SFX Bible …) – Lizenz nicht nachweisbar
+- **technisch defekt** (übersteuert, Vorschau-MP3, zu niedrige Abtastrate) und **Doppelte**
+
+Nutzung in Pipelines: `audiokit/bibliothek.py` (`ensure(kanal)`, `pick(kanal, kategorie, seed)`, `suche("auto")`). Lädt nur den eigenen Kanal-Ordner + gemeinsam.
